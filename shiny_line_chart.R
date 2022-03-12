@@ -12,7 +12,7 @@ ui <- fluidPage(
     )
   )
 )
-  
+
 server <- function(input, output, session){
   output$trend <- renderPlot({
     data_name <- subset(
@@ -24,5 +24,5 @@ server <- function(input, output, session){
       )
   })
 }
-  
+
 shinyApp(ui = ui, server = server)
